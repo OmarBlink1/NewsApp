@@ -1,9 +1,5 @@
-//
 //  NewsViewModel.swift
-//  NewsApp3
-//
-//  Created by Blinnk22 User on 23/08/2023.
-//
+
 
 import Foundation
 import UIKit

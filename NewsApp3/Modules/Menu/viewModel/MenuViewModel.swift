@@ -27,41 +27,5 @@ struct MenuViewModel {
         
     }
 }
-    ///OLD CODE - START
-//        FetchNews { result in
-//        switch result
-//        {
-//
-//        case .success(let news) :
-//            print("sucess")
-//            let ans = ["ans" : news.articles]
-//            NotificationCenter.default.post(name: NotificationCenterNaming.fetch_name, object: nil , userInfo: ans)
-//            for ind in 0..<news.articles.count
-//            {
-//                let article = news.articles[ind]
-//
-//                    FetchImage(imageURL: article.urlToImage) { res in
-//                        switch res{
-//                        case .success(let Data) :
-//                                print("Got Image")
-//                                NotificationCenter.default.post(name: Notification.Name("image"),
-//                                                                object: nil , userInfo: ["data":Data ,"num":ind ])
-//
-//                        case.failure(let er) :
-//                                print("Image",er)
-//
-//                        }
-//
-//
-//                }
-//            }
-//        case .failure(let netErr) :
-//            print("Failure")
-//            print(netErr)
-//        }
-//        print("END")
-//    }
-//    print("Here")
-//    }
-        ///OLD CODE - END
+
 
