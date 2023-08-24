@@ -1,0 +1,9 @@
+Target dependency graph (4 targets)
+Alamofire in Pods, no dependencies
+AlamofireImage in Pods, depends on:
+Alamofire in Pods (explicit)
+SDWebImage in Pods, no dependencies
+Pods-NewsApp3 in Pods, depends on:
+Alamofire in Pods (explicit)
+AlamofireImage in Pods (explicit)
+SDWebImage in Pods (explicit)

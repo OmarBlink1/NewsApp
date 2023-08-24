@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "breaking-news-on-world-map-background-element-design-for-tv-and-digital-content-png.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

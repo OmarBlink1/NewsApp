@@ -1,0 +1,6 @@
+framework module Pods_NewsApp3 {
+  umbrella header "Pods-NewsApp3-umbrella.h"
+
+  export *
+  module * { export * }
+}
