@@ -14,7 +14,6 @@ class MenuTableViewController: UITableViewController, menu_viewModel_output {
 
     
     override func viewDidLoad() {
-        self.viewModel = MenuViewModel()
         self.viewModel.output = self
         self.viewModel.fetchDetails()
     }
