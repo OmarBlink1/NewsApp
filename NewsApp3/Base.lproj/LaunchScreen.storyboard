@@ -17,16 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breaking-news-on-world-map-background-element-design-for-tv-and-digital-content-png" translatesAutoresizingMaskIntoConstraints="NO" id="N45-Vb-uPw">
-                                <rect key="frame" x="21.666666666666657" y="338.66666666666669" width="349.66666666666674" height="200.00000000000006"/>
+                                <rect key="frame" x="8" y="338.66666666666669" width="377" height="200.00000000000006"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N45-Vb-uPw" secondAttribute="trailing" constant="21.666666666666629" id="C4c-9f-12B"/>
-                            <constraint firstItem="N45-Vb-uPw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Kcw-do-X6t"/>
-                            <constraint firstItem="N45-Vb-uPw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gJx-84-Aa9"/>
-                            <constraint firstItem="N45-Vb-uPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21.666666666666657" id="grr-ds-aFm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N45-Vb-uPw" secondAttribute="trailing" constant="8" id="C4c-9f-12B"/>
+                            <constraint firstItem="N45-Vb-uPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="grr-ds-aFm"/>
+                            <constraint firstItem="N45-Vb-uPw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wAD-vQ-TLL"/>
                         </constraints>
                     </view>
                 </viewController>

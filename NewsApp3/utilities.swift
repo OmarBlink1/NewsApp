@@ -25,3 +25,11 @@ func convertDate(_ dateString: String) -> String {
 
 }
 let dummyData = ""
+
+enum NetworkError: Error {
+    case badURL
+    case DecodingFailed
+    case FetchingFailed
+}
+
+let NewsURL = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=6d6c705de0144601ae596a1cee44e9fa"

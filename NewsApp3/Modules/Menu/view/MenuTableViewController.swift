@@ -4,22 +4,31 @@
 
 import UIKit
 import AlamofireImage
-class MenuTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController, menu_viewModel_output {
+   
+    
     
     var Articles = [ArticleModel]()
+    private var viewModel = MenuViewModel()
+    
+
     
     override func viewDidLoad() {
-        MenuViewModel.updateNumberOfArticles(self)
+        self.viewModel = MenuViewModel()
+        self.viewModel.output = self
+        self.viewModel.fetchDetails()
     }
-
-    func UpdateTable (_ articles: [ArticleModel])
-    {
-            self.Articles = articles
-            DispatchQueue.main.async {
-                print("Reloading Table View")
-                self.tableView.reloadData()
-            }
+    
+    func updateView(list_of_articles: [ArticleModel]) {
+        print("Updating view from output")
+        self.Articles = list_of_articles
+        DispatchQueue.main.async {
+            print("Reloading Table View")
+            self.tableView.reloadData()
+        }
     }
+    
+    
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {

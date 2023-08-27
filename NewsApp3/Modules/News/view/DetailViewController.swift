@@ -3,14 +3,20 @@
 
 import UIKit
 import AlamofireImage
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController , Detail_viewModel_ouput{
+    func updateView(single_article: ArticleModel) {
+        
+    }
+    
     var myArticle :ArticleModel!
-
-
+    private var viewModel = NewsViewModel()
+    
     @IBOutlet var myImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        NewsViewModel.Set_labels(self)
+//        NewsViewModel.Set_labels(self)
+        self.viewModel.output = self
+        self.viewModel.Set_labels()
     }
     
     @IBOutlet weak var BackButton: UIButton!

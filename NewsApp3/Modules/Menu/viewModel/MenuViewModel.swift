@@ -3,16 +3,16 @@
 import Foundation
 import Alamofire
 struct MenuViewModel {
-    static func updateNumberOfArticles(_ vc : MenuTableViewController){
-        ///returns number of rows  needed in menu
-        ///It should call the API and return the array in JSON length
-        
+    weak var output : MenuTableViewController?
+    
+    func fetchDetails() {
         AF.request(NewsURL).validate().responseDecodable(of:NewsModel.self){ (response) in
                 guard let News = response.value else { return }
-            print("New response",News.articles)
-            vc.UpdateTable(News.articles)
+            print("fetched neews and calling output")
+            print("Output : ",self.output)
+            //MARK: NOTE 1: Is this considered Delegete ?
+            self.output?.updateView(list_of_articles: News.articles)
         }
-        
     }
     
     static func set_cell_labels(cell : TableViewCell , currentArticle : ArticleModel ,  ind : Int)
