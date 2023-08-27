@@ -10,41 +10,17 @@ class MenuTableViewController: UITableViewController {
     var ArticleImages = [Int : Data]()
     
     override func viewDidLoad() {
-
         MenuViewModel.updateNumberOfArticles(self)
-        
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    //Implementing Observer for Notification
-    @objc func UpdateTableImage (_ notification: NSNotification)
-    {
-        if let res = notification.userInfo?["data"] as? Data ,let num = notification.userInfo?["num"] as? Int{
-            self.ArticleImages[num] = res
-            DispatchQueue.main.async {
-                print("Reloading Table View")
-                self.tableView.reloadData()
-            }
-        }
-        
-
     }
 
-    func UpdateTableText (_ articles: [ArticleModel])
+    func UpdateTable (_ articles: [ArticleModel])
     {
             self.Articles = articles
             DispatchQueue.main.async {
                 print("Reloading Table View")
                 self.tableView.reloadData()
             }
-
     }
-
-    
-    
-    
     
     //done implementing Observer
     // MARK: - Table view data source
@@ -68,16 +44,10 @@ class MenuTableViewController: UITableViewController {
         }
         return cell
     }
-    
 
-    
-    
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(Articles[indexPath.row])
         NewsViewModel.present(Articles[indexPath.row], currentViewController: self)
-
     }
     
 

@@ -10,7 +10,7 @@ struct MenuViewModel {
         AF.request(NewsURL).validate().responseDecodable(of:NewsModel.self){ (response) in
                 guard let News = response.value else { return }
             print("New response",News.articles)
-            vc.UpdateTableText(News.articles)
+            vc.UpdateTable(News.articles)
         }
         
     }
