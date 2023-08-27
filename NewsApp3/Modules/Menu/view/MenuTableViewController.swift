@@ -7,7 +7,6 @@ import AlamofireImage
 class MenuTableViewController: UITableViewController {
     
     var Articles = [ArticleModel]()
-    var ArticleImages = [Int : Data]()
     
     override func viewDidLoad() {
         MenuViewModel.updateNumberOfArticles(self)
