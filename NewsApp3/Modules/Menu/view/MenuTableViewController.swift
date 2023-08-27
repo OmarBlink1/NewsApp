@@ -22,7 +22,6 @@ class MenuTableViewController: UITableViewController {
             }
     }
     
-    //done implementing Observer
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -45,8 +44,8 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
 
+    ///selected/pressed some row
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(Articles[indexPath.row])
         NewsViewModel.present(Articles[indexPath.row], currentViewController: self)
     }
     
